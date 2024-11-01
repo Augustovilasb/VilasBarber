@@ -1,0 +1,1397 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/*
+
+These are the font import that I've been using on this project.
+    font-family: "Great Vibes", cursive;
+    font-family: "Bebas Neue", system-ui;
+    font-family: "Poppins", sans-serif;
+    font-family: "Courier Prime", monospace;
+
+  I have been using these fonts on the VILAS website because I was trying to find some fonts to showcase the beauty
+  of visagism and also to demonstrate how even a rustic detail can make all the difference.
+  Also, I would like to talk about the website color here. First of all, I’ve been using black and white because,
+  in my opinion, it is an amazing combination that matches with anything. Additionally, this color scheme helps people with visibility problems,
+  such as color blindness, which is my case (Yes, I am colorblind). It helps us and includes these people as well.
+
+  You can navigate through the whole CSS document using shortcuts.
+  Ctrl+F and find the names of the pages or specific blocks to make it easier.
+  The sections that I've been writing about here are:
+  Note: Copy only the name, no numbers.
+  However ensure use the quot marks when necessery to find the topics successfully.
+  
+  1. Block Header starts
+  1.2. Header Main Container
+  1.3. Header Copyright
+  1.4. Header Image
+  1.5. Header Nav Menu
+  1.6. Header Currently Name Page
+  
+  2. Page "Home" starts
+  2.1. Background-Image Home Page
+  2.2. Lent Creating to the Background-Image
+  2.3. Main Title
+  2.4. Button Home Page
+  
+  3. Pages "About Us" and "Packages" starts (This page has the same css code to the "Package" page)
+  3.1. Background-Image About Us Page
+  3.2. Lent Creating to the Background-Images
+  3.3. Main Title on the About Us Page, H1, H2, p
+  3.4. Container With the Services
+  3.5. Logo inside the each block service
+  3.6. Titles inside the services blocks on "Package" page
+  3.7. Price of the services on page "Packages"
+  3.8. List of Service
+  3.9. The buttons inside each block service
+  
+  4. Page "Gallery" starts
+  4.1. The main container on "Gallery" page
+  4.2. The container with the pictures
+  4.3. The class to each picture
+  4.4. The main button on "Gallery" page
+  4.5. The Title on "Gallery" page
+  4.6. The credits Freepik on "Gallery"
+  
+  5. Page "Contact" starts
+  5.1. The title on "Contact" page
+  5.2. The background image
+  5.3. The lent on the background-image
+  5.4. The main container form
+  5.5. The inputs inside the form
+  5.6. The span msg
+  5.7. The textarea inside the form
+  5.8.  The button Submit
+  
+  6. Block "Map" starts
+  6.1. The main container Map
+  6.2. The main Title Map
+  6.3. The Iframe Google maps
+  6.4. The Google Reference bellow the Map
+  
+  7. Block Footer starts
+  7.1. Footer section
+  7.2. Footer Image
+  7.3. Footer Nav List
+  7.4. Footer Currently pages name
+  7.5. The Copyright Footer
+  
+  8. Block "Whatsapp" starts
+  8.1. Whatsapp Image
+  8.2. Whatsapp Image Position
+
+  Note: All documents have been formatted and indented by Prettier extension in VS Code
+  
+*/
+
+body {
+  /* This body here, I use it to let me able to apply margin and padding on the whole page. */
+  margin: 0;
+  /* I use it to remove the entire margin from the body, ensuring that the content starts with browser window without any spacing. */
+  padding: 0;
+  /* I use it to remove the entire padding from the body, ensuring that the content starts with browser window without any spacing. */
+  box-sizing: border-box;
+  /* I added this command so that all the sizes I define for a container or content, such as borders, etc., 
+  are already calculated so that the size of the element is exactly as I defined. */
+}
+
+/* ------------------------------------- Block Header starts ------------------------------------------ */
+
+/* ---- Header Main Container ---- */
+
+.mainheader {
+  /* Im using the "mainheader" that is the father continaer to the header 2.
+  which has the Mustache Logo, the navegation menu list and the name of the currently page.
+  And this class let me able to apply CSS Style on it. */
+  background: #000000;
+  /* I'm using this command to adding the black as a background color on header 2.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  display: flex;
+  /* I've been using the Display flex here, because it allow me to manipulate these 3 items that I have inside of the "mainheader".
+  The logo container, the list container and the currentl page container.
+  Letting these items as a row, which is the standart settings of the display flex. */
+  align-items: center;
+  /* I used this command because it centralizes the items inside the container on the cross axis. */
+  justify-content: space-around;
+  /* Also, I chose the "space-around" to have a smaller gap between the items in the container on the main axis.
+  This makes everything look more organized, This helps the items with nice space without being too far apart.*/
+}
+
+/* ---- Header Copyright ---- */
+
+.credits {
+  /* Now im using this class to add some CSS style on the credits line. */
+  display: flex;
+  /* I've been using the Display flex here, because it allow me to manipulate these 4 items
+  and also, to display there items as a row, such as standart settings by display flex. I have 4 items inside of the "credits". */
+  align-items: center;
+  /* I used this command because it centralizes the items inside the container on the cross axis. */
+  justify-content: space-around;
+  /* Also, I chose the "space-around" to have a smaller gap between the items in the container on the main axis.
+  This makes everything look more organized, This helps the items with nice space without being too far apart.*/
+  background-color: #fff;
+  /* As the header above is black with white letters, I decided to change it to get a contrast,
+  and the letters from the credits aren't bold, so the white background is nice to read. */
+  max-height: 30px;
+  /* This command sets a maximum height for the container. Since it is an informational container,
+  I decided not to make it too large, but it is already sufficient to be read clearly, and it is
+  positioned both above the header and below the footer. */
+  min-width: 1000px;
+  /* I set a minimum width for this line. What it does is that if someone reduces the screen to
+  less than 800 px in width, the text inside does not exceed the defined limit, meaning that the
+  text does not overlap with other items in the interface */
+}
+
+.credits p {
+  /* Now im using this class to add some CSS style on the credits <p> tags, it means, on the text.*/
+  color: #000000;
+  /* I'm using this command to adding the white as a text color on credits text.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-family: "Courier Prime", monospace;
+  /* I'm using this font-family for the credits because I thought it matched the purpose properly.
+  It is more like an informative and serious text. */
+  font-size: 13px;
+  /* I used this size of the font on the credits text because I saw it perfect with the purpose.
+  Showing the message necessary and reading clearly. And also matching with the background. */
+}
+
+/* ---- Header Image ---- */
+
+header .img {
+  /* Now im using this class to add some CSS style on the header <img> tags, it means, on the image*/
+  width: 90px;
+  /* I'm using this command to define a width size for the Mustache Logo on the header.
+  I want to keep it smaller, but not too small. */
+}
+
+/* ---- Header Nav Menu ---- */
+
+header nav ul {
+  /* Now im using this to add some CSS style on the header <nav> and  <ul> tags, it means, on the navegation menu. */
+  display: flex;
+  /* I've been using the Display flex here, because it allow me to manipulate these 5 items
+  and also, because the standar settings of flex display is the row form to the items inside the containers.,
+  5 items that I have inside of the "nav ul", it means, 5 pages on the menu. */
+  align-items: center;
+  /* I used this command because it centralizes the items inside the container on the cross axis. */
+  justify-content: center;
+  /* Also, I chose the "center" to have a centralzed gap between the items in the middle of the container on the main axis.
+  This makes everything look more organized. */
+  gap: 60px;
+  /* I'm using the gap as 60px because this way the buttons in the nav menu don't stay too close. */
+}
+
+header nav ul li {
+  /* Now im using this to add some CSS style on the header <nav>, <ul> and <li> tags, it means, on the navegation menu text. */
+  color: #fff;
+  /* I'm using this command to adding the white as a text color on credits text.
+  And here I decided to add a white color such as the background button is black.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  list-style: none;
+  /* I'm using this command to prevent the text from having any color link or underline. */
+}
+
+header nav ul li a {
+  /* Now im using this to add some CSS style on the header <nav>, <ul>, <li> and <a> tags, it means, on the navegation menu buttons. */
+  color: #ffffff;
+  /* I'm using this command to adding the white as a text color on the buttons.
+  And here I decided to add a white color such as the background button is black.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-family: "Poppins", sans-serif;
+  /* I'm using this font-family for the buttons because I thought it matched the button size and also is the font that
+  i have been using on the whole website. */
+  font-size: 18px;
+  /* I'm using this font-size to avoid having the button with small text, while still being readable. */
+  font-weight: bold;
+  /* im using this command to let the text on the button with a bold letters. */
+  border-radius: 15px;
+  /* I'm using this command to add a slight curve to the buttons, which I think matches the site's style nicely. */
+  text-decoration: none;
+  /* I'm using this command to prevent the text from having any color link or underline. */
+  padding: 8px 25px;
+  /* I'm using padding of 8px and 25px because this way the buttons will have space inside.
+  It doesn't make the buttons too small and thin. */
+  transition: 0.3s;
+  /* I'm using this command to create a smooth effect, and I defined a transition of 0.3 seconds for the hover below */
+}
+
+header nav ul li a:hover {
+  background-color: #ffffff;
+  /* I'm using this command to add the changes on the button from black to white when the user hovers over the button.
+  And here I decided to add a white color since the normal background button is black.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  color: #050505;
+  /* I'm using this command to add the changes on the button text from white to black when the user hovers over the button.
+  And here I decided to add a black text color since the normal text color is white.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2), 0 4px 6px rgba(0, 0, 0, 0.05);
+  /* I'm using this command to add an effect as a shadow around the button when the user hovers over it.
+  And then the user can have a greater sense of depth for the button. It's just a nice visual effect. */
+}
+
+/* ---- Header Currently Name Page ---- */
+
+header .currentlypage {
+  /* Now im using this class to add some CSS style on the header Currently Page Title, it means, on the Page name. */
+  font-family: "Bebas Neue", system-ui;
+  /* I'm using this font-family for the titles because I thought it matched the style that I decided to use on the whole website. */
+}
+
+/* ------------------------------------- Page "Home" starts ------------------------------------------ */
+
+/* ---- Background-Image Home Page ---- */
+
+.banner {
+  /* Now I'm using this class to add some CSS style to the banner on the main page, as we have added the background image. */
+  position: relative;
+  /* I used this command so that I could move it as I did. I wanted to place the center of the image 
+  right in the center of its space, which is why it is a relative position to its initial space.
+  I chose to use position: relative here because this allows me to define additional properties,
+  such as background-size: cover, background-repeat: no-repeat, etc. */
+  background-image: url("../img/barba.jpg");
+  /* I’m using this because it makes the site more professional. */
+  background-repeat: no-repeat;
+  /* Since I wanted to see the image only once and center it, I didn't want it to repeat, so I chose to use no-repeat */
+  background-position: center;
+  /* Since I wanted to see the center of image on the center of the background relative as the container background.
+  I decided to use the position as center. */
+  background-size: cover;
+  /* Since I wanted to see the iamage covering the whole background.
+  I'm using it to cover the whole container while the original proportion filling the entire background. */
+  height: 88vh;
+  /* Here, I defined the height of the container like the screen size, choosing a height
+  enouth to cover the whole corner of the screen without needing to use margin or padding. */
+  display: flex;
+  /* I've been using the Display flex here, because it allow me to manipulate these 3 items,
+  3 that I have inside of the "nav ul". */
+  align-items: center;
+  /* I used this command because it centralizes the items inside the container on the cross axis. */
+  justify-content: center;
+  /* I also chose 'center' to centralize the items along the to te main axis as well,
+  letting them in the middle of the container. This makes everything look more organized */
+}
+
+/* ---- Lent Creating to the Background-Image ---- */
+
+.lenthome {
+  /* I used this class to add a lent darken on the background-image. */
+  position: absolute;
+  /* I have been using the position: absolute command on the lens because the parent container has position: relative.
+   This makes the lens follow the patterns and positioning of the parent container.
+   In this way, I can position the lens in any way I want, but of course, in relation to the parent container that has position: relative */
+  width: 100%;
+  height: 100%;
+  /* I used both of these commands to make the lent at the same size of the background-image. */
+  background: #000000ab;
+  /* I chose a lens that adds a dark tint, reducing the brightness of the image,
+  where It's help the bannet title and text in Hilights */
+}
+
+/* ---- Main Title ----  H1, H2, H3 */
+
+.titlehome {
+  /* Here is the class about the titles container on the banner, the titles. */
+  z-index: 1000;
+  /* I'm using z-index here because when I apply the lens, it stays behind the item, meaning the user cannot interact with it.
+  The color will also be affected by the lens. To bring the text to the front on the Z-axis, we use z-index.
+  I just used 1000 as a z-index, because that way, there is no change to anything be at front. */
+}
+
+.titlehome h1 {
+  /* Here is the class about the text H1 on the banner. */
+  text-align: center;
+  /* I used this command to get the title H1 on the middle of the center.
+  Which make the user get the mainly ideia instantly. Easier to see on middle. */
+  color: #ffffff;
+  /* I'm using this command to adding the white as a text color on the texts.
+  And here I decided to add a white color such as the background lent is almost black.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-family: "Poppins", sans-serif;
+  /* I'm using this font-family for the phrases because I thought it matched the button size and also is the font that
+  i have been using on the whole website. */
+  font-size: 18px;
+  /* I'm using this font-size to avoid having the text too small. */
+  font-weight: 600;
+  /* I'm using this font-weight to let the text with a kinda bold letter. */
+}
+
+.titlehome h2 {
+  /* Here is the class about the text H2 on the banner. */
+  color: #ffffff;
+  /* I'm using this command to adding the white as a text color on the texts.
+  And here I decided to add a white color such as the background lent is almost black.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-size: 50px;
+  /* I have chosen 50px here because it is the homepage with the main idea, and we need to ensure that the user understands it. */
+  font-family: "Bebas Neue", system-ui;
+  /* I'm using this font-family for the phrases because I thought it matched the button size and also is the font that
+  i have been using on the whole website. */
+  text-align: center;
+  /* I used this command to get the title H1 on the middle of the center. */
+  padding: 0;
+  margin: 0;
+  /* I used both of these commands to make the items shorter by each other. */
+}
+
+.titlehome h3 {
+  /* Here is the class about the text H3 on the banner. */
+  color: #ffffff;
+  /* I'm using this command to adding the white as a text color on the texts.
+  And here I decided to add a white color such as the background lent is almost black.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-family: "Great Vibes", cursive;
+  /* I'm using this font-family for the main title because I have to get the attention of the user to this new service.
+  I have been using it on the whole website. */
+  font-size: 150px;
+  /* I'm using this size for the same reason that I've chosen that font: to get attention.
+  To be honest, I think that it matches perfectly. */
+  font-weight: 100;
+  /* I'm using it because I think the cursive letter is better than. */
+  text-align: center;
+  /* I used this command to get the title H1 on the middle of the center. */
+  padding: 0;
+  margin: 0;
+  /* I used both of these commands to make the items shorter by each other. */
+}
+
+/* ---- Button Home Page ----  a */
+
+.titlehome a {
+  /* Here is the class about the button A on the banner. */
+  background-color: #00000052;
+  /* I'm using this command to adding the black transparent as a background on the main button on the home page.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  color: #ffffff;
+  /* I'm using this command to adding the white as a text color on the main button text.
+  And here I decided to add a white color such as the background button is black.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-family: "Poppins", sans-serif;
+  /* I'm using this font-family for the buttons because I thought it matched the button size and also is the font that
+  i have been using on the whole website. */
+  display: flex;
+  /* I've been using the Display flex here, because it allow me to manipulate the button position. */
+  align-items: center;
+  /* I used this command because it centralizes the items inside the container on the cross axis.
+  This makes everything look more organized. */
+  justify-content: center;
+  /* Also, I chose the 'center' to have a centralized item inside the container on the main axis.
+  This makes everything look more organized. */
+  text-decoration: none;
+  /* I'm using this command to prevent the text from having any color link or underline. */
+  font-weight: bold;
+  /* I'm using this font-weight to let the letter as a bold letter. */
+  border-radius: 15px;
+  /* I'm using this command to add a slight curve to the buttons, which I think matches the site's style nicely. */
+  font-size: 18px;
+  /* I'm using this font-size to avoid having the button with small text, while still being readable. */
+  width: 30%;
+  /* I used the commands to make the items 30% of the container size. */
+  padding: 12px 20px;
+  /* I'm using padding as 12px and 20px because this way the buttons will have space inside.
+  It doesn't make the buttons too small and thin. */
+  margin: 10px auto;
+  /* I'm using margin as 10px and auto because, like this, the button gets a margin above and below, and on both sides, it stays in the middle.
+  It doesn't make the buttons too small and thin. */
+  transition: 0.3s;
+  /* I'm using this command to create a smooth effect, and I defined a transition of 0.3 seconds for the hover below.
+  Just to attract the user, just a visual effect. */
+}
+
+.titlehome a:hover {
+  /* Im using this class to add a changes on the button. */
+  background-color: #ffffff4b;
+  /* I'm using this command to add the changes on the main button from back to white transparent when the user hovers over the button.
+  And here I decided to add a white color since the normal background button is black.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  color: #050505;
+  /* I'm using this command to add the changes on the button text from white to black when the user hovers over the button.
+  And here I decided to add a black text color since the normal text color is white.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  cursor: pointer;
+  /* I'm using this command so that when the user hovers over the button, it changes. */
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2), 0 4px 6px rgba(0, 0, 0, 0.05);
+  /* I'm using this command to add an effect as a shadow around the button when the user hovers over it.
+  And then the user can have a greater sense of depth for the button. It's just a nice visual effect. */
+}
+
+/* ------------------------------------- Pages "About Us" and "Packages" starts ------------------------------------------ */
+
+/* ---- Background-Image About Us Page ---- */
+
+.aboutback {
+  /* Now im using this class to add some CSS style on the about container, as the background-image. */
+  position: relative;
+  /* I used this command so that I could move it as I did. I wanted to place the center of the image
+  right in the center of its space, which is why it is a relative position to its initial space.
+  I chose to use position: relative here because this allows me to define additional properties,
+  such as background-size: cover, background-repeat: no-repeat, etc. */
+  display: flex;
+  /* I've been using the Display flex here, because it allow me to manipulate the items on the container.
+  If im not using It here, the content of the container would be behind the lent that I've been created.
+  And, to be able to modifly than or let them more visible, we have to diaply it as a flex. */
+  background-image: url("../img/capa.jpg");
+  /* I’m using this because it makes the site more professional. */
+  background-repeat: no-repeat;
+  /* Since I wanted to see the image only once and center it, I mean, to use the whole picture only once on the background;
+  I didn't want it to repeat, so I chose to use no-repeat */
+  background-position: center;
+  /* Since I wanted to see the center of image on the center of the background relative as the container background.
+  I decided to use the position as center. */
+  background-size: cover;
+  /* Since I wanted to see the iamage covering the whole background.
+  I'm using it to cover the whole container while the original proportion filling the entire background. */
+  height: 85vh;
+  /* Here, I defined the height of the container like the screen size, choosing a height
+  enouth to cover the whole corner of the screen without needing to use margin or padding. */
+  align-items: center;
+  /* I used this command because it centralizes the items inside the container on the cross axis. */
+}
+
+/* ---- Lent Creating to the Background-Images ---- */
+
+.lentabout {
+  /* I used this class to add a lent darken on the background-image. */
+  position: absolute;
+  /* I have been using the position: absolute command on the lens because the parent container has position: relative.
+   This makes the lens follow the patterns and positioning of the parent container.
+   In this way, I can position the lens in any way I want, but of course, in relation to the parent container that has position: relative */
+  width: 100%;
+  height: 100%;
+  /* I used both of these commands to make the lent at the same size of the background-image. */
+  background: #000000ab;
+  /* I chose a lens that adds a dark tint, reducing the brightness of the image,
+  where It's help the bannet title and text in Hilights */
+}
+
+/* ---- Main Title on the About Us Page, H1, H2, p ---- */
+
+.maintext {
+  display: flex;
+  /* I've been using the Display flex here, because it allow me to manipulate these 3 items,
+    The title H1,"Vilas Barber ✂", the title H2 "From Italy to the world." and the tag P also.
+    So, as a display flex I can do these items as a column. */
+  flex-direction: column;
+  /* I'm using this command to display the items as a column because when we use display: flex,
+  the items take a row form as a standart. */
+  align-items: center;
+  /* I used this command because it centralizes the items inside the container on the cross axis. */
+  min-width: 950px;
+  /* I set a minimum width for this line. What it does is that if someone reduces the screen to
+  less than 950 px in width, the text inside does not exceed the defined limit, meaning that the
+  text does not overlap with other items in the interface */
+  z-index: 1000;
+  /* I'm using z-index here because when I apply the lens, it stays behind the item, meaning the user cannot interact with it.
+  The color will also be affected by the lens. To bring the text to the front on the Z-axis, we use z-index.
+  I just used 1000 as a z-index, because that way, there is no change to anything be at front. */
+}
+
+.maintext h1 {
+  /* Here is the class about the text H1 on the "About us" main text. */
+  font-family: "Bebas Neue", system-ui;
+  /* I'm using this font-family for the phrases because I thought it matched the button size and also is the font that
+  i have been using on the whole website. */
+  color: #ffffff;
+  /* I'm using this command to adding the white as a text color on the texts.
+  And here I decided to add a white color such as the background lent is almost black.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-size: 55px;
+  /* I have chosen 50px here because it is the homepage with the main idea, and we need to ensure that the user understands it. */
+  text-align: center;
+  /* I used this command to get the title H1 on the middle of the center. */
+}
+
+.maintext h2 {
+  /* Here is the class about the text H2 on the "About us" main text. */
+  font-family: "Poppins", sans-serif;
+  /* I'm using this font-family for the phrases because I thought it matched the button size and also is the font that
+  i have been using on the whole website. */
+  color: #ffffff;
+  /* I'm using this command to adding the white as a text color on the texts.
+  And here I decided to add a white color such as the background lent is almost black.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-size: 22px;
+  /* I'm using this font-size to avoid having the text too small. */
+  font-weight: 500;
+  /* I'm using this font-weight to let the text with a kinda bold letter. */
+  text-align: center;
+  /* I used this command to get the title H1 on the middle of the center.
+  I used to the user see ther mainly idea as a highlight. */
+}
+
+.maintext p {
+  /* Here is the class about the text P on the "About us" main text. */
+  font-family: "Poppins", sans-serif;
+  /* I'm using this font-family for the phrases because I thought it matched the button size and also is the font that
+  i have been using on the whole website. */
+  color: #ffffff;
+  /* I'm using this command to adding the white as a text color on the texts.
+  And here I decided to add a white color such as the background lent is almost black.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-size: 16px;
+  /* I'm using this font-size to avoid having the text too small. */
+  font-weight: 200;
+  /* I'm using this font-weight to make the text thinner. */
+  max-width: 50%;
+  /* I'm using this command so that the paragraph uses 50% of the size of the whole page,
+  that is, a maximum width of 50% of the page. */
+  text-align: center;
+  /* I used this command to get the title H1 on the middle of the container. 
+  So, like this the user can se the title as soon as possible. */
+  line-height: 2em;
+  /* I'm using this command to create a space of 2em from one line to another line. */
+}
+
+/* ---- Container With the Services ---- */
+
+.section-services {
+  /* Here is the class about the father container on services section. */
+  font-family: "Poppins", sans-serif;
+  /* I'm using this font-family for the phrases because I thought it matched the button size and also is the font that
+  i have been using on the whole website. */
+  background-color: #000;
+  /* I'm using this command to adding the black as a background color on the "About us" page.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  color: #ffffff;
+  /* I'm using this command to adding the white as a text color on the texts.
+  And here I decided to add a white color such as the background lent is almost black.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-size: 25px;
+  /* I'm using this font-size as 25 because it is important information on website. */
+  text-align: center;
+  /* I used this command to get the title H1 on the middle of the center. */
+  padding: 50px;
+  /* Im usint this commando to get a properly space between the containers from the footer. */
+  min-width: 1200px;
+  /* I set a minimum width for this line. What it does is that if someone reduces the screen to
+  less than 1200px in width, the text inside does not exceed the defined limit, meaning that the
+  text does not overlap with other items in the interface */
+}
+
+.section-services .blocks {
+  /* Here is the class about the each block services container on services section. */
+  background-color: #000;
+  /* I'm using this command to adding the black as a background color on the "About us" page.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  display: flex;
+  /* I've been using the Display flex here, because it allow me to manipulate these 3 items,
+  3 that I have inside of the "nav ul". */
+  justify-content: center;
+  /* I used this command because it centralizes the items inside the container on the main axis. */
+  padding: 30px;
+  /* Im using it to get a confortable sapace betweem the services blocks. */
+}
+
+.services {
+  /* Services is the class which has the "services containers" inside. */
+  display: flex;
+  /* I've been using the Display flex here, because it allow me to manipulate these 3 items,
+  3 that I have inside of the "nav ul". */
+  flex-direction: column;
+  /* I've been using the flex direction column here because, when you apply display flex, it defaults to a row layout. I want the services to be displayed in 3 columns.
+  3 that I have inside of the "nav ul". */
+  align-items: center;
+  /* I used this command to get the contenct of services block on the center of the container on the cross axis. */
+  background-color: #ffffff;
+  /* I'm using this command to adding the white as a background color.
+  And here I decided to add a white color such as the background lent is almost black.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  width: 340px;
+  height: 410px;
+  /* I used both of these commands to make the items the with the 340px of width and 410px of height. */
+  border-radius: 20px;
+  /* I'm using this command to add a slight curve to the services containers, which I think matches the site's style nicely. */
+  margin: 30px 60px;
+  /* I'm using margin as 30px and 60px because, like this, the services container gets a margin above and bellow, and on both sides. */
+}
+
+/* ---- Logo inside the each block service ---- */
+
+.services img {
+  /* This is the class where I can apply the CSS Style on the container services image. */
+  width: 33%;
+  /* I've been choosen the widht of the img as 33% of the container service's width.
+  Like this the image will get 33% of the space and will be left 33% at each side also. */
+  padding: 15px;
+  /* With this command I've adding the padding at the img inside the container services,
+  only tosetting the items inside the container. */
+}
+
+/* ---- Titles inside the services blocks on "Package" page ---- */
+
+.services h1 {
+  /* This is the class where I can apply the CSS Style on the container services title H1. */
+  font-family: "Poppins", sans-serif;
+  /* I'm using this font-family for the Title because I thought it matched the button size and also is the font that
+  i have been using on the whole website. */
+  color: #000000;
+  /* I'm using this command to adding the black as a text color on the services Title h1.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-size: 25px;
+  /* I'm using this font-size as 25px because it is the title on services containers. */
+  font-weight: 600;
+  /* I'm using this font-weight to let the text with a kinda bold letter. */
+  margin: 0;
+  /* I used the command margin to make the items with out any outside margin. */
+}
+
+.services h2 {
+  /* I'm using this command to adding the black as a text color on the services Title h2. */
+  color: #000000;
+  /* As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-size: 20px;
+  /* I'm using this font-size as 20px because It's not a the title, and can be a normal-sized content. */
+  font-weight: 300;
+  /* I'm using this font weight to make the text appear thinner. */
+}
+
+/* ---- Price of the services on page "Packages" ---- */
+
+.services .number {
+  /* I'm using this command to adding the black as a text color on the services Prices (Numbers). */
+  color: #000;
+  /* As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything.
+  But mainly because the background is white. */
+  font-size: 40px;
+  /* I'm using this font-size as 40px because It's the main iformation on this service container.
+  So, It has to be bigger, and anyone can see It inside. */
+  font-weight: 900;
+  /* I'm using this font-weight to make sure that the number is really attractive with a bold style */
+  margin: 5px;
+  /* I used the command margin to make the Number with a margin around It, so It will be in highlight. */
+}
+
+/* ---- List of Services ---- */
+
+.services ul {
+  display: flex;
+  /* I've been using the Display flex here, because it allow me to manipulate these 3 items,
+  3 that I have inside of the "nav ul". */
+  flex-direction: column;
+  /* I have to use this command here to get the services list as a column instead a row,
+  because when I set the display as a flex display, the container is instantly in a row form. */
+  align-items: start;
+  /* I used this command to get the content of the list at the starting point of the container.
+  This way, the services will be displayed aligned. */
+  padding: 0;
+  /* I used this command to remove all the space aroudf the content, thus giving it zero padding, meaning no space at all. */
+}
+
+.services ul li {
+  font-family: "Poppins", sans-serif;
+  /* I'm using this font-family for the Title because I thought it matched the button size and also is the font that
+  i have been using on the whole website. */
+  color: #000000;
+  /* I've been using this color, to match with the services blocks, which has the background white.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-size: 18px;
+  /* I have been testing the sizes and this one is the one which matches the most. */
+  font-weight: 300;
+  /* I'm using this font weight to make the text appear thinner. */
+  list-style: circle;
+  /* I've added this command, to get a circle point at the beginning of each services list,
+  than the user can be clearly each is each services availables. */
+}
+
+/* ---- The buttons inside each block service ---- */
+
+.buttonser {
+  /* I've using this name to the button service, so, the name is button and ser from services. */
+  background-color: #000000;
+  /* I'm using this command to adding the black as a background on the main button service on the "About" page.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  color: #ffffff;
+  /* I'm using this command to adding the white as a text color on the texts.
+  And here I decided to add a white color such as the background a black transparent.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-size: 18px;
+  /* I have been testing the sizes and this one is the one which matches the most. */
+  font-weight: bold;
+  /* I'm using this font-weight to let the letter as a bold letter, which lets the buttons highlighted. */
+  border-radius: 15px;
+  /* I'm using this command to add a slight curve to the buttons, which I think matches the site's style nicely. */
+  text-decoration: none;
+  /* I've using this command to let the word on the center of the button, with out underlinse or any decoration. */
+  padding: 12px 25px;
+  /* I used this command to padding all the space aroudf the content, thus giving it the 12px padding above and bellow,
+  and, 25px on the left and on the right. */
+  transition: 0.3s;
+  /* I'm using this command to create a smooth effect, and I defined a transition of 0.3 seconds for the hover below.
+  Just to attract the user, just a visual effect. */
+}
+
+.buttonser:hover {
+  /* I've using this class to add some hovers effects on the service button. */
+  background-color: #ffffff;
+  /* I'm using this command to adding the white as a background color.
+  And here I decided to add a white color such as the background lent is almost black.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  color: #000000;
+  /* I'm using this command to adding the bkack as a text color.
+  And here I decided to add a white color such as the background white.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  cursor: pointer;
+  /* I'm using this command so that when the user can interact with the button.
+  Hovering the mouse over the button changes the button color. */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 6px 10px rgba(0, 0, 0, 0.15);
+  /* I'm using this command to add an effect as a shadow around the button when the user hovers over it.
+  And then the user can have a greater sense of depth for the button. It's just a nice visual effect. */
+}
+
+/* ------------------------------------- Page "Gallery" starts ------------------------------------------ */
+
+/* ---- The main container on "Gallery" page ---- */
+
+.gallery-barber {
+  /* I've using this name as a class to the main container on the gallery page. */
+  background-color: #ffffff;
+  /* I'm using this command to add white as a background color, as the page is only pictures.
+  I thought it would be clearer with white instead of black.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  display: flex;
+  /* I'm using display flex here because I want to put the all content inside the container "gallery-barber",
+  in a column form,  with the next commando "fle-direction.  */
+  flex-direction: column;
+  /* Im using this command as a column because the Title, button and the container "blockgallery" on the column form. */
+  align-items: center;
+  /* I used this command to get the content of gallery-barber on the center of the container. */
+}
+
+/* ---- The container with the pictures ---- */
+
+.blocksgallery {
+  /* I've using this name to the content container inside the gallery-barber container. */
+  display: flex;
+  /* I'm using display flex here because I want to put the all content inside the container "gallery-barber",
+  in a column form,  with the next commando "flex-flow.  */
+  flex-flow: row wrap;
+  /* I'm using this command here to allow me to change the pictures' positions inside the container "blocksgallery".
+  As I have 16 pictures inside the container, I wanted to put them in 4 rows of 4 pictures each.
+  So, when I used "row," it just confirms the standard of display-flex.
+  And when I used "wrap," it means that the content does not pass the page limit and breaks the line, creating another row below. */
+  align-items: center;
+  /* I used this command to get the content of "blockgallery" on the center of the container. */
+  justify-content: space-between;
+  /* I'm using this command because I want a space between the pictures inside the "blocksgallery" container.
+  And It is a easier way to do it with only one command. */
+  width: 60%;
+  /* I set a width for this line as a 60% of the whole widht
+  Because I want to let the gallery centralized, with a short space on the left and right.
+  So, It is the easier way (that I know) to do It with less commands). */
+  min-height: 880px;
+  /* I've been setting the minimum height for the "blocksgallery" because I want to have at least enough space for 4 rows of 4 pictures each.
+  Since I set 220px per picture, it means I need at least 880px. */
+  gap: 20px;
+  /* I've set a 20px gap between the pictures so that the pictures don't stay too close to each other. */
+  padding-top: 70px;
+  /* I used this command to padding the space above the gallery.
+  Thus giving it the 50px between the gallery and the button. */
+  margin: 0;
+  /* I used the command margin to make the items with out any outside margin. */
+}
+
+/* ---- The class to each picture ---- */
+
+.photo {
+  /* I've using this name of the class, which let me able to modify the pictures,
+  as the size, adding border and etc. */
+  width: 220px;
+  /* I have decided the 220px width size per picture, because I thought It was a good size,
+  and everyone can see the picture cleary. */
+  height: 220px;
+  /* I have decided the 220px height size per picture, because I thought It was a good size,
+  and everyone can see the picture cleary. */
+  border-radius: 10%;
+  /* I'm using this command to add a slight curve to the buttons, which I think matches the site's style nicely. */
+  gap: 5px;
+  /* I've set a 5px gap between the pictures so that the pictures don't stay too close to each other. */
+}
+
+/* ---- The main button on "Gallery" page ---- */
+
+.buttongallery {
+  /* I've using this name as a class to the gallery main button. */
+  background-color: #000000;
+  /* I'm using this command to adding the black as a background on the main button gallery.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  color: #ffffff;
+  /* I'm using this command to adding the white as a text color on the texts.
+  And here I decided to add a white color such as the background a black.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-family: "Poppins", sans-serif;
+  /* I'm using this font-family for the Title because I thought it matched the button size and also is the font that
+  i have been using on the whole website. */
+  font-size: 18px;
+  /* I have been testing the sizes and this one is the one which matches the most. */
+  font-weight: bold;
+  /* I'm using this font-weight to let the letter as a bold letter, which lets the buttons highlighted. */
+  border-radius: 15px;
+  /* I'm using this command to add a slight curve to the buttons, which I think matches the site's style nicely. */
+  text-decoration: none;
+  /* I've using this command to let the word on the center of the button, with out underlinse or any decoration. */
+  padding: 12px 20px;
+  /* I used this command to padding all the space aroudf the content, thus giving it the 12px padding above and bellow,
+  and, 20px on the left and on the right. */
+  transition: 0.3s;
+  /* I'm using this command to create a smooth effect, and I defined a transition of 0.3 seconds for the hover below.
+  Just to attract the user, just a visual effect. */
+}
+
+.buttongallery:hover {
+  /* This is the class which lat me able to make changes with the button when the user hovers it. */
+  background-color: #ffffff;
+  /* I'm using this command to adding the white as a background color.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  color: #000000;
+  /* I'm using this command to adding the black as a text color on the texts.
+  And here I decided to add a white color such as the background a white.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  cursor: pointer;
+  /* I'm using this command so that when the user can interact with the button.
+  Hovering the mouse over the button changes the button formater. */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.15);
+  /* I'm using this command to add an effect as a shadow around the button when the user hovers over it. */
+}
+
+/* ---- The Title on "Gallery" page ---- */
+
+.gallerytitle {
+  /* I've using this name as a class to the "gallerytitle" which has the title and the button together. */
+  display: flex;
+  /* I've been using the Display flex here, because it let me centralize the Title and the button on the page's middle */
+  flex-direction: column;
+  /* I have to use this command here to get the title and the button gallery as a column instead a row,
+  because when I set the display as a flex display, the container is instantly in a row form. */
+  align-items: center;
+  /* I used this command to get the contenct of the gallery title and button on the center of the container. */
+}
+
+.gallerytitle h1 {
+  /* I've using this name as a class which allow me to change the titles preferences. */
+  font-family: "Poppins", sans-serif;
+  /* I'm using this font-family for the Title because I thought it matched the button size and also is the font that
+  i have been using on the whole website. */
+  font-size: 40px;
+  /* I'm using this font-size as 40px because It's the main iformation on this service container.
+  So, It has to be bigger, and anyone can see It inside. */
+  font-weight: bold;
+  /* I'm using this font-weight to let the letter as a bold letter, which lets the buttons highlighted. */
+  padding-top: 50px;
+  /* I used this command to padding 50px between the title and the header. */
+  color: #000000;
+  /* I'm using this command to adding the black as a text color on the texts.
+  And here I decided to add a white color such as the background a white.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+}
+
+/* ---- The credits Freepik on "Gallery" ---- */
+
+.creditsgallery {
+  /* this is the class where I add the credits for the pictures on this gallery. */
+  display: inline-block;
+  /* I'm using display: inline-block here because I want to place the credits on the left side of the gallery.
+  As I don't need to do anything else on this page, I just want to create a line with blocks. */
+  min-width: 60%;
+  /* I have defined that the line block container would have 60% of the page's width.
+  Since it is a line block and stays close to the starting block, I don't need to do anything else to keep it at the start. */
+  font-size: 12px;
+  /* I'm using this font-size as 12px because It's the a important iformation but It can be small and beside the pictures. */
+  padding-bottom: 50px;
+  /* I've been addint this padding bottom to get a space between the footer and the gallery credits. */
+}
+
+/* ------------------------------------- Page "Contact" starts ------------------------------------------ */
+
+/* ---- The title on "Contact" page ---- */
+
+.titlecontact h1 {
+  /* I've using this name as a class to the "titlecontact" where we have the main title on "Contact" page. */
+  font-family: "Poppins", sans-serif;
+  /* I'm using this font-family for the Title because I thought it matched the button size and also is the font that
+  i have been using on the whole website. */
+  color: #ffffff;
+  /* I'm using this command to adding the white as a text color on the main title on "Contact" page.
+  And here I decided to add a white color such as the background is black.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  text-align: center;
+  /* I used this command to get the title H1 on the middle of the center. */
+  font-size: 30px;
+  /* I'm using this font-size as 30px because It's the main phrase on the "Contact" page.
+  So, It has to be bigger, and anyone can see It. */
+  font-weight: 600;
+  /* I'm using this font-weight to let the text with a kinda bold letter. */
+  padding-bottom: 50px;
+  /* I've been addint this padding bottom to get a space between the contact section between and the map sections. */
+}
+
+.titlecontact {
+  /* I've using this name as a class to be able to modify the titlecontact container. */
+  z-index: 1000;
+  /* I'm using z-index here because when I apply the lens, it stays behind the item, meaning the user cannot interact with it.
+  The color will also be affected by the lens. To bring the text to the front on the Z-axis, we use z-index.
+  I just used 1000 as a z-index, because that way, there is no change to anything be at front. */
+}
+
+/* ---- The background image ---- */
+
+.contactme {
+  /* I've using this name as a class to the "contactme" where we have the main title on "Contact" page. */
+  position: relative;
+  /* I used this command so that I could move it as I did. I wanted to place the center of the image
+  right in the center of its space, which is why it is a relative position to its initial space.
+  I chose to use position: relative here because this allows me to define additional properties,
+  such as background-size: cover, background-repeat: no-repeat, etc. */
+  background-image: url("../img/vintage-chairs-barbershop.jpg");
+  /* That is the commando I've been using to pick the picture which would be my background. */
+  background-repeat: no-repeat;
+  /* Since I wanted to see the image only once and center it, I mean, to use the whole picture only once on the background;
+  I didn't want it to repeat, so I chose to use no-repeat */
+  background-position: center;
+  /* Since I wanted to see the center of image on the center of the background relative as the container background.
+  I decided to use the position as center. */
+  background-size: cover;
+  /* Since I wanted to see the iamage covering the whole background.
+  I'm using it to cover the whole container while the original proportion filling the entire background. */
+  background-color: rgba(0, 0, 0, 0.705);
+  /* I'm using this command to adding the black as a background color.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  height: 85vh;
+  /* Here, I defined the height of the container like the screen size, choosing a height
+  as 85vh to make sure it cover the whole form. */
+  width: 100%;
+  /* I used both of these commands to make the lent at the width size of the background-image. */
+  display: flex;
+  /* I've been using the Display flex here, because it allow me to manipulate the items on the container.
+  If im not using It here, the content of the container would be behind the lent that I've been created.
+  Looks the same than the z-index. But the idea here is be able to modify the content.
+  And, to be able to modifly than or let them more visible, we have to diaply it as a flex. */
+  align-items: center;
+  /* I used this command to get the contenct of the form on the center of the container on the second axis. */
+  justify-content: center;
+  /* I used this command because it centralizes the items inside the container on the main axis. */
+  flex-direction: column;
+  /* I have to use this command here to get the title and the button gallery as a column instead a row,
+  because when I set the display as a flex display, the container is instantly in a row form. */
+}
+
+/* ---- The lent on the background-image ---- */
+
+.lentcontact {
+  /* Here is the class which I'm able to modify the lent size and color */
+  width: 100%;
+  height: 100%;
+  /* I used both of these commands to make the lent at the same size of the contact page. */
+  background: #000000c4;
+  /* I've been using this collor to all lents on this website. */
+  position: absolute;
+  /* I have been using the position: absolute command on the lens because the parent container has position: relative.
+   This makes the lens follow the patterns and positioning of the parent container.
+   In this way, I can position the lens in any way I want, but of course, in relation to the parent container that has position: relative */
+}
+
+/*  ---- The main container form ---- */
+
+.talkbox {
+  /* Here is the class which let me able to change the talkbox container. */
+  height: 500px;
+  width: 575px;
+  /* I've been using 500px and 575px here to get a nice size to the talkbox container. */
+  z-index: 1000;
+  /* I'm using z-index here because when I apply the lens, it stays behind the item, meaning the user cannot interact with it.
+  The color will also be affected by the lens. To bring the text to the front on the Z-axis, we use z-index.
+  I just used 1000 as a z-index, because that way, there is no change to anything be at front. */
+  margin: 0;
+  /* I used the command margin to make the items with out any outside margin. */
+}
+
+.contactinputs {
+  /* Here is the class which I'm able to modify the inputs area. */
+  display: flex;
+  /* I've been using the Display flex here, because it allow me to manipulate the button inside the container. */
+  flex-direction: column;
+  /* I have to use this command here to get the title and the button gallery as a column instead a row,
+  because when I set the display as a flex display, the container is instantly in a row form. */
+  justify-content: center;
+  /* I used this command because it centralizes the items inside the container main axis. */
+  gap: 15px;
+  /* I've set a 5px gap between the pictures so that the pictures don't stay too close to each other. */
+}
+
+/*  ---- The inputs inside the form ---- */
+
+.inputs {
+  /*  Here is the class which let me able to change the input area. */
+  font-family: "Poppins", sans-serif;
+  /* I'm using this font-family for the Title because I thought it matched the button size and also is the font that
+  i have been using on the whole website. */
+  box-sizing: border-box;
+  /* I added this command so that all the sizes I define for a container or content, such as borders, etc.,
+  are already calculated so that the size of the element is exactly as I defined. */
+  background: #cfcbcbd0;
+  /* I've been using this color to give a different color to the input areas, which creates a contrast with the lens behind, which is almost black. */
+  color: #000000;
+  /* I'm using this command to adding the black as a text color on the inputs.
+  And here I decided to add a black color such as the background a white.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-size: 15px;
+  /* I'm using this font-size as 15px because It's the main phrase on the "Contact" page.
+  So, It has to be bigger, and anyone can see It. */
+  height: 45px;
+  width: 100%;
+  /* I've been using 45px 100%px here to get a nice size and the same width as the talkbox container to the textarea inputs. */
+  border: 2px solid black;
+  /* I've been using this command to highlight the border, as the input area I added is white. */
+  border-radius: 10px;
+  /* I'm using this command to add a slight curve to the input area, which I think matches the site's style nicely. */
+  text-indent: 10px;
+  /* I've been using this commando to add a idention of the text inside the input area, because it was to close to the border. */
+}
+
+input:-webkit-autofill {
+  background-color: #cfcbcbd0 !important;
+  -webkit-box-shadow: 0 0 0px 1000px #cfcbcbbd inset !important;
+}
+
+/*  ---- The textarea inside the form ---- */
+
+#message {
+  /* This class allows me to control the size of the text area message, as well as the font and size.
+  However, it only applies to the message displayed to the user. While the user is typing, the "input" settings make the changes.*/
+  font-family: "Poppins", sans-serif;
+  /*  Here is the class which let me able to change the input area. */
+  /* I'm using this font-family for the Title because I thought it matched the button size and also is the font that
+  i have been using on the whole website. */
+  font-size: 15px;
+  /* I'm using this font-size as 15px because It's the main phrase on the "Contact" page.
+  So, It has to be bigger, and anyone can see It. */
+  min-width: 550px;
+  min-height: 150px;
+  /* I've been using the min-width and min-height on the text area just to make sure the user has enough size to
+  text and that the text area size matches the input area's size.*/
+}
+
+/* ---- The span msg ---- */
+
+.spanrequired {
+  /* Here is the class which let me able to the span letters bellow each input area and text area. */
+  font-size: 15px;
+  /* I'm using this font-size as 15px because It's the main phrase on the "Contact" page.
+  So, It has to be bigger, and anyone can see It. */
+  display: none;
+  /* I'm using this command to hide the <span> message in case of user failure.  */
+  color: red;
+  /* I'm using this command to add red as the text color for the span message because it's a warning.
+  And here I decided to add a white color such as the background a white.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  margin: 3px 0 0 1px;
+  /* Im using It to add the respective margins at the span message. */
+  padding: 10px;
+  /* Im using It to add the respective padding at the span message.
+  Than the user can see the message clearly. */
+}
+
+/*  ---- The button Submit ---- */
+
+.submitmsg {
+  /*  Here is the class which let me able to change tge button on contact area, the Submit button. */
+  font-family: "Poppins", sans-serif;
+  /* I'm using this font-family for the Title because I thought it matched the button size and also is the font that
+  i have been using on the whole website. */
+  background-color: #cfcbcbd2;
+  /* I've been using this color to give a different color to the input areas, which creates a contrast with the lens behind, which is almost black. */
+  color: #000000;
+  /* I'm using this command to adding the black as a text color on the texts.
+  And here I decided to add a white color such as the background a white.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-size: 18px;
+  /* I have been testing the sizes and this one is the one which matches the most. */
+  font-weight: bold;
+  /* I'm using this font-weight to let the letter as a bold letter, which lets the buttons highlighted. */
+  text-decoration: none;
+  /* I've using this command to let the word on the center of the button, with out underlinse or any decoration. */
+  border-radius: 15px;
+  /* I'm using this command to add a slight curve to the buttons, which I think matches the site's style nicely. */
+  padding: 9px 30px;
+  /* Im using It to add the respective padding at the Submit button.
+  Than the user can see the message clearly. */
+  margin: 10px auto;
+  /* I'm using a margin of 10px and auto because this way, the button gets a margin above and below,
+  and the browser will calculate the necessary margin to center the content.
+  This ensures that the buttons are not too small and thin. */
+  transition: 0.3s;
+  /* I'm using this command to create a smooth effect, and I defined a transition of 0.3 seconds for the hover below.
+  Just to attract the user, just a visual effect. */
+}
+
+.submitmsg:hover {
+  /*  Here is the class which let me able to change the Submit button. */
+  cursor: pointer;
+  /* I'm using this command so that when the user can interact with the button, while hovers the mouse the cursor changes.
+  Hovering the mouse over the button changes the button formater. */
+  background-color: #ffffffcb;
+  /* I'm using this command to adding the black as a background color when the user hovers the mouse on the Submit button.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  color: #000000;
+  /* I'm using this command to adding the black as a text color on the texts.
+  And here I decided to add a white color such as the background a white.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.15);
+  /* I'm using this command to add an effect as a shadow around the button when the user hovers over it. */
+}
+
+/* ------------------------------------- Block "Map" starts ------------------------------------------ */
+
+/* ---- The main container Map ---- */
+
+.map {
+  /*  Here is the class which let me able to change the map section. */
+  background-color: #000;
+  /* I'm using this command to adding the black as a background color on the "Contact" page, map section.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  display: flex;
+  /* I've been using the Display flex here, because I want to position the map and the title on the middle of the section
+  And this command let me manipulate it. */
+  flex-direction: column;
+  /* With this command I can put the title and the map on the middle position,
+  the standart for the display flex is the row form, so, I use the flex direction to put it on column. */
+  justify-content: center;
+  /* I used this command because it centralizes the items inside the container on the main axis. */
+  align-items: center;
+  /* I used this command to get the contenct of the form on the center of the container on the second axis. */
+  padding-bottom: 100px;
+  /* I've been addint this padding bottom to get a space between the contact section between and the map sections. */
+}
+
+/* ---- The main Title Map ---- */
+
+.map h1 {
+  /*  Here is the class which let me able to change the map section. */
+  font-family: "Poppins", sans-serif;
+  /* I'm using this font-family for the Title because I thought it matched the button size and also is the font that
+  i have been using on the whole website. */
+  color: #ffffff;
+  /* I'm using this command to adding the white as a text color on the main title on "Contact" page, map section.
+  And here I decided to add a white color such as the background is black.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-size: 30px;
+  /* I'm using this font-size as 30px because It's the main title on the Map section page.
+  So, It has to be bigger, and anyone can see It. */
+  font-weight: 600;
+  /* I'm using this font-weight to let the text with a kinda bold letter. */
+  padding: 90px 0 80px 0;
+  /* I've been addint this padding 90px on the top, 0px on the right, 80px on the bottom, and 0 on the left
+  to get a good space between the form section to the title and between the title and the map. */
+  margin: 0;
+  /* I used the command margin to make the items with out any outside margin. */
+}
+
+/* ---- The Iframe Google maps ---- */
+
+.map iframe {
+  /*  Here is the class which has the Google Maps Link. */
+  width: 50%;
+  /* I've chosen 50% for the map to occupy half of the screen. */
+  filter: invert(100%);
+  /* I have used this code to change the color of the Google Maps iframe, which darkens the map.
+  I think it matches with the website's style. */
+}
+
+/* ---- The Google Reference bellow the Map ---- */
+
+.reference p {
+  /*  Here is the class which let me able to change the google reference bellow the map. */
+  font-family: "Courier Prime", monospace;
+  /* I'm using this font-family for the Google references because I thought it matched with the copyright section
+  and the letter is nice smaller. I have been using on the whole website when is It about references or copyrights. */
+  color: #ffffff;
+  /* I'm using this command to adding the white on the google reference bellow the google map.
+  And here I decided to add a white color such as the background is black.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-size: 13px;
+  /* I’m using this font size as 13px because it’s for small google maps announcements.
+  Therefore, it has to be smaller, but the text is nice and readable for everyone */
+  width: 950px;
+  /* I've been using 950px on the map to create nice spacing. If I center it, in my opinion,
+  it doesn't match my website's style, so I thought it would be better to leave it beside the map border. */
+}
+
+/* ------------------------------------- Block Footer starts ------------------------------------------ */
+
+/* ---- Footer section ---- */
+
+footer .footer1,
+.footer2 {
+  /*  Here is the class which let me able to change the footer area. */
+  background: #000;
+  /* I'm using this command to adding the black as a background color on the footer section.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  display: flex;
+  /* I've been using the Display flex here, because it allow me to manipulate these 3 items that I have inside of the Footer.
+  The logo container, the list container and the currentl page container.
+  Letting these items as a row, which is the standart settings of the display flex. */
+  align-items: center;
+  /* I used this command to get the contenct of the form on the center of the container. */
+  justify-content: space-around;
+  /* Also, I chose the "space-around" to have a smaller gap between the items in the container.
+  This makes everything look more organized, This helps the items with nice space without being too far apart.*/
+}
+
+/* ---- Footer Image ---- */
+
+.footer1 .img {
+  /*  Here is the class which let me able to change the image on footer. */
+  width: 90px;
+  /* I'm using this command to define a width size for the Mustache Logo on the footer.
+  I want to keep it smaller, but not too small. */
+  height: auto;
+  /* I'm using a margin of 0 and auto because this way the browser will calculate the necessary height to the image. */
+}
+
+/* ---- Footer Nav List ---- */
+
+.footer1 nav ul {
+  /* Now im using this to add some CSS style on the footer <nav> and  <ul> tags, it means, on the navegation menu. */
+  display: flex;
+  /* I've been using the Display flex here, because it allow me to manipulate these 5 items
+  and also, because the standar settings of flex display is the row form to the items inside the containers.,
+  5 items that I have inside of the "nav ul", it means, 5 pages on the menu. */
+  align-items: center;
+  /* I used this command because it centralizes the items inside the container on the second axis. */
+  justify-content: center;
+  /* Also, I chose the "center" to have a centralzed gap between the items in the middle of the container on the main axis.
+  This makes everything look more organized. */
+  gap: 60px;
+  /* I'm using the gap as 60px because this way the buttons in the nav menu don't stay too close. */
+}
+
+.footer1 nav ul li a {
+  /*  Here is the class which let me able to change the footer. */
+  color: #ffffff;
+  /* I'm using this command to adding the white color on the footer menu items.
+  And here I decided to add a black color such as the background a white.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  list-style: none;
+  /* I'm using this command to prevent the text from having any color link or underline. */
+  font-family: "Poppins", sans-serif;
+  /* I'm using this font-family for the Title because I thought it matched the button size and also is the font that
+  i have been using on the whole website. */
+  font-size: 18px;
+  /* I have been testing the sizes and this one is the one which matches the most. */
+  font-weight: bold;
+  /* I'm using this font-weight to let the letter as a bold letter, which lets the buttons highlighted. */
+  border-radius: 15px;
+  /* I'm using this command to add a slight curve to the buttons, which I think matches the site's style nicely. */
+  text-decoration: none;
+  /* I've using this command to let the word on the center of the button, with out underlinse or any decoration. */
+  padding: 8px 25px;
+  /* I'm using padding of 8px and 25px because this way the buttons will have space inside.
+  It doesn't make the buttons too small and thin. */
+  transition: 0.3s;
+  /* I'm using this command to create a smooth effect, and I defined a transition of 0.3 seconds for the hover below.
+  Just to attract the user, just a visual effect. */
+}
+
+footer nav ul li a:hover {
+  /*  Here is the class which let me able to change the hoover on the footer. */
+  background-color: #ffffff;
+  /* I'm using this command to adding the white as a background color.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  color: #000000;
+  /* I'm using this command to adding the black as a text color on the footer menu items.
+  And here I decided to add a white color such as the background a white.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  cursor: pointer;
+  /* I'm using this command so that when the user can interact with the button.
+  Hovering the mouse over the button changes the button color. */
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2), 0 4px 6px rgba(0, 0, 0, 0.05);
+  /* I'm using this command to add an effect as a shadow around the button when the user hovers over it.
+  And then the user can have a greater sense of depth for the button. It's just a nice visual effect. */
+}
+
+/* ---- Footer Currently pages name ---- */
+
+.currently h1 {
+  /*  Here is the class which let me able to change the currently page title. It's a item on footer. */
+  font-family: "Bebas Neue", system-ui;
+  /* I'm using this font-family for the titles because I thought it matched the style that I decided to use on the whole website. */
+  color: #ffffff;
+  /* I'm using this command to adding the white color on the footer menu items.
+  And here I decided to add a black color such as the background a white.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  height: 50px;
+  /* I'm using auto height, so the height adapts to the width size. */
+  text-decoration: none;
+  /* I've using this command to let the word on the center of the button, with out underlinse or any decoration. */
+  font-size: 35px;
+  /* I have been testing the sizes and this one is the one which matches the most. */
+  font-weight: 400;
+  /* I'm using this font-weight to let the text with a kinda bold letter. */
+  margin: 0;
+  /* I used the command margin to make the items with out any outside margin. */
+}
+
+/* The Copyright Footer */
+
+.footer2 p {
+  /*  Here is the class which let me able to change the letters on the copyright footer. */
+  font-family: "Courier Prime", monospace;
+  /* I'm using this font-family for the credits because I thought it matched the purpose properly.
+  It is more like an informative and serious text. */
+  color: #ffffff;
+  /* I'm using this command to adding the white as a letter color.
+  As previously mentioned, the choice of color was made for inclusion purposes and because it goes well with anything. */
+  font-size: 13px;
+  /* I used this size of the font on the credits text because I saw it perfect with the purpose.
+  Showing the message necessary and reading clearly. And also matching with the background. */
+}
+
+.footer2copyright {
+  /*  Here is the class which let me able to change the copyright area. */
+  display: flex;
+  /* I've been using the Display flex here, because it allow me to manipulate these 3 items
+  and also, to display there items as a row, such as standart settings by display flex. I have 4 items inside of the "footer2". */
+  align-items: center;
+  /* I used this command because it centralizes the items inside the container on the cross axis. */
+  justify-content: center;
+  /* I used this command because it centralizes the items inside the container on the main axis. */
+  padding-bottom: 10px;
+  /* I've been addint this padding bottom to get a space between the copyright to the screen border. */
+  gap: 80px;
+  /* I've set a 80px gap between the items copyright don't stay too close to each other. */
+}
+
+/* ------------------------------------- Block "Whatsapp" starts ------------------------------------------ */
+
+/* ---- Whatsapp Image ---- */
+
+.whatsappblock img {
+  /*  Here is the class which let me able to change the Whatsapp block. */
+  display: block;
+  /* Ive been adding the display block here, because It dont need to be changed.
+  And I just need a block of image on the screen border. */
+  max-width: 70px;
+  /* I'm using this command so that the phrases uses 70px of the size of the whole page,
+  It means, a maximum width of 70px of the page. */
+  height: auto;
+  /* I'm using a margin of 0 and auto because this way the browser will calculate the necessary height to the image. */
+  cursor: pointer;
+  /* I'm using this command so that when the user hovers over the Whatsapp Image, it changes. */
+  margin: 0;
+  padding: 0;
+  /* I used both of these commands to make the items shorter by each other. */
+}
+
+/* ---- Whatsapp Image Position ---- */
+
+.whatsappblock {
+  /*  Here is the class which let me able to change the input area. */
+  position: fixed;
+  /* I’m using it because I want the position of the WhatsApp logo to be fixed on all screens.
+  This way, it will always be displayed to the user. */
+  z-index: 1000;
+  /* I'm using z-index here because when I apply the lens, it stays behind the item, meaning the user cannot interact with it.
+  The color will also be affected by the lens. To bring the Whatsapp image to the front on the Z-axis, we use z-index.
+  I just used 1000 as a z-index, because that way, there is no change to anything be at front. */
+  top: 72.5%;
+  left: 95.5%;
+  /* I used top 73% and 95.5% to position the WhatsApp logo on the bottom right side of the screen.
+  I think it's a common place for a contact icon, which is why I chose it. */
+}

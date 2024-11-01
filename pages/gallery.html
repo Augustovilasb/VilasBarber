@@ -1,0 +1,499 @@
+<!-- Note: All documents have been formatted and indented using the Prettier extension in Visual Studio Code -->
+
+<!DOCTYPE html>
+<!-- I use it as a HTML5 to the document get read by any currently modern browsers. -->
+<html lang="en">
+  <!-- I used this command to indicate that all the content of the webpage is in English. -->
+
+  <head>
+    <!-- I used this command to include all the necessary information such as metadata,
+   styles and scripts, everything which is necessary to the webpage runs properly.
+   It is where the head secction starts. The content of <head> doesn't show up on the page.
+    Nobody will see it, but it is really important informations. -->
+    <meta charset="UTF-8" />
+    <!-- Since there are different characters in different encodings,
+     I used this tag to ensure that anyone can open and view the content. -->
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- I use this tag to define how the page will show up on mobile browsers.
+     It specifies that on mobile viewport width will be visible with the device width.
+     And the zoom will be 1.0, ensuring a good experience.
+     Then the user can see the whole page completely configured for the best experience. -->
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <!-- I have been using this command to link the .html file with the .css file,
+     which allows us to apply changes to the interface and graphics defined on the webpage. -->
+    <title>Vilas Barber</title>
+    <!-- I am using this tag to define the title of the page, the name that appears on the browser tab
+     So the user can see which site they are on based on the open tab and the correct title. -->
+  </head>
+  <!--  I used this is the tag to close the head section and allows us to start building the body. -->
+  <body>
+    <!-- I used this tag to indicate the beginning of the content that will be shown on the page.
+     it is the "body" of the HTML that encompasses the entire site displayed to the user. -->
+    <header>
+      <!-- After the opening of the "body", this is where the "header" is located,
+       the first container father of the page, where you typically find the navigation list,
+       the logo or name of the website, and some information. -->
+      <section class="header">
+        <!-- In my header, I have two sections, one called div 1 and the other called div 2;
+         the first one I used to put all the information about copyright, licenses,
+         and references for the all media that I’ve been using here.
+         In div 2, we can find the mustache logo, the nav list menu of the website,
+         and the display that indicates which page we are on. Therefore,
+         this command defines the section header, where we have div 1 and div 2 inside. -->
+        <div class="credits">
+          <!-- This command defines where the header div 1 starts in the header,
+           which contains all the information and references about the sites where I got all the media. -->
+          <p>All the media content on this website has been created by:</p>
+          <!-- In this tag, I've been using <p> because it is a tag where I simply
+            introduce information about the media used on the site. It is where the
+            user will see at the top of the site the necessary information about who
+            created the media used here -->
+          <p>
+            © 2024 Images and logos created by:
+            <!-- In this tag, I've been using <p> as well and this tag allow us to whrite any information inside it.
+              And show it on the webpage to the user. And the user will see this phrase on the webpage top. -->
+            <a
+              href="https://www.freepik.com/search?format=search&last_filter=query&last_value=barber&query=barber"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Freepik</a
+            >.
+            <!-- In this tag, I've been using <a> because the Freepik reference must be as a link, and this tag allow us to clic on.
+              and also the freepik link is the website where i got the pictures and this protects the original work from Freepik and makes it easy for the user to identify.
+              I put this command, "_blank", because it allows us to open the link in another tab in the browser, which lets the previous one stay open.
+              When I used the target="_blank", the browser, in a way, allows information exchange between the two tabs.
+              That is why I also used noopener, which tells the new page that it cannot access the page from which it came.
+              I also used noreferrer, which keeps the two tabs well separated without this exchange of information, ensuring more security.
+              So, with it, the new link opened in another tab does not know where we came from."-->
+          </p>
+          <!-- U use this tah because is here that we close the tag <p>. So the user can see properly the information inside it on the website. -->
+          <p>
+            © 2024 Icons created by:
+            <!-- In this tag, I've been using <p> as well and this tag allow us to whrite any information inside it.
+                And show it on the webpage to the user. And the user will see this phrase on the webpage top. -->
+            <a
+              href="https://www.flaticon.com/search?word=moustache"
+              target="_blank"
+              rel="nooper noreferrer"
+              >Flaticon</a
+            >.
+            <!-- In this tag, I've been using <a> because the FlatIcon reference must be as a link, and this tag allow us to clic on.
+                  and also the FlatIcon link is the website where i got the pictures and this protects the original work from Freepik and makes it easy for the user to identify.
+                  I put this command, "_blank", because it allows us to open the link in another tab in the browser, which lets the previous one stay open.
+                  When I used the target="_blank", the browser, in a way, allows information exchange between the two tabs.
+                  That is why I also used noopener, which tells the new page that it cannot access the page from which it came.
+                  I also used noreferrer, which keeps the two tabs well separated without this exchange of information, ensuring more security.
+                  So, with it, the new link opened in another tab does not know where we came from."-->
+          </p>
+          <!-- U use this tah because is here that we close the tag <p>. So the user can see properly the information inside it on the website. -->
+          <p>
+            <!-- U use this tah because is here that we close the tag <p>. So the user can see properly the information inside it on the website. -->
+            © 2024 Icons created by:
+            <!-- In this tag, I've been using <p> as well and this tag allow us to whrite any information inside it.
+              And show it on the webpage to the user. And the user will see this phrase on the webpage top. -->
+            <a
+              href="https://icons8.com/icon/set/barbershop%C2%B4/family-forma"
+              target="_blank"
+              rel="nooper noreferrer"
+              >Icons8</a
+            >.
+            <!-- In this tag, I've been using <a> because the FlatIcon reference must be as a link, and this tag allow us to clic on.
+                  and also the FlatIcon link is the website where i got the pictures and this protects the original work from Freepik and makes it easy for the user to identify.
+                  I put this command, "_blank", because it allows us to open the link in another tab in the browser, which lets the previous one stay open.
+                  When I used the target="_blank", the browser, in a way, allows information exchange between the two tabs.
+                  That is why I also used noopener, which tells the new page that it cannot access the page from which it came.
+                  I also used noreferrer, which keeps the two tabs well separated without this exchange of information, ensuring more security.
+                  So, with it, the new link opened in another tab does not know where we came from."-->
+          </p>
+          <!-- U use this tah because is here that we close the tag <p>. So the user can see properly the information inside it on the website. -->
+        </div>
+        <!-- I use this tag to close the header div 1. -->
+
+        <div class="mainheader">
+          <!-- This command defines where the header div 2 starts in the header,
+           which contains all the information and references about the sites where I got all the media.
+           On this div I used to put the mustache logo and the nav list,
+           where we can see all the pages. This is where you find the entire site map. -->
+          <div>
+            <!-- I used this <div> tag to create a container with a logo content. -->
+            <img class="img" src="../img/moustache1.png" alt="Mustache Logo" />
+            <!-- I used this tag to add a picture to the header, which is the company logo: a mustache. The "src" attribute indicates where the
+             picture is located in the project folder. Also, I used the "alt" attribute to provide information about the picture,
+             so when the picture doesn't load, the phrase will appear, and the user will know what it is.  -->
+          </div>
+          <!-- I use this tag to close the container where is the content where i've added the Mustache Logo. -->
+
+          <nav>
+            <!-- I used this tag to start the navigation list menu section, which allows us to create a navigation menu. -->
+            <ul>
+              <!-- Since it is a navigation menu, we need to create an unordered list, which corresponds to the type of menu I created.
+                That is why I used this tag -->
+              <li>
+                <!-- I used this tag to define the first item of the unordered list, which in my case is the "Home" page. -->
+                <a href="../pages/index.html">Home</a>
+                <!-- I used this <a> tag because I want the first item of the unordered list to be a link, where the user can click and thus be directed to the corresponding page.
+                  In this case, by clicking on the first item in this list, you will be directed to the "Home" page. -->
+              </li>
+              <!-- I used this tag to close the first item of the unordered list, which in my case is the "Home" page. -->
+              <li>
+                <!-- I used this tag to define the second item of the unordered list, which in my case is the "About us" page. -->
+                <a href="../pages/about.html">About</a>
+                <!-- I used this <a> tag because I want the second item of the unordered list to be a link, where the user can click and thus be directed to the corresponding page.
+                  In this case, by clicking on the second item in this list, you will be directed to the "About us" page. -->
+              </li>
+              <!-- I used this tag to close the second item of the unordered list, which in my case is the "About us" page. -->
+              <li>
+                <!-- I used this tag to define the third item of the unordered list, which in my case is the "Gallery" page. -->
+                <a href="../pages/gallery.html">Gallery</a>
+                <!-- I used this <a> tag because I want the third item of the unordered list to be a link, where the user can click and thus be directed to the corresponding page.
+                  In this case, by clicking on the third item in this list, you will be directed to the "Gallery" page. -->
+              </li>
+              <!-- I used this tag to close the third item of the unordered list, which in my case is the "Gallery" page. -->
+              <li>
+                <!-- I used this tag to define the fourth item of the unordered list, which in my case is the "Packages" page. -->
+                <a href="../pages/packages.html">Packages</a>
+                <!-- I used this <a> tag because I want the fourth item of the unordered list to be a link, where the user can click and thus be directed to the corresponding page.
+                  In this case, by clicking on the fourth item in this list, you will be directed to the "Packages" page. -->
+              </li>
+              <!-- I used this tag to close the fourth item of the unordered list, which in my case is the "Packages" page. -->
+              <li>
+                <!-- I used this tag to define the fifth item of the unordered list, which in my case is the "Contact" page. -->
+                <a href="../pages/contact.html">Contact</a>
+                <!-- I used this <a> tag because I want the fifth item of the unordered list to be a link, where the user can click and thus be directed to the corresponding page.
+                  In this case, by clicking on the fifth item in this list, you will be directed to the "Contact" page. -->
+              </li>
+              <!-- I used this tag to close the fifth item of the unordered list, which in my case is the "Contact" page. -->
+            </ul>
+            <!-- So here I used this tag to close the unordered list of header 2. -->
+          </nav>
+          <!-- I used this tag to close the navigation list menu section, making the container close. -->
+
+          <div class="currently">
+            <!-- I used the <div> tag here to create a new container where we can find the content "currently," which means:
+            it is the place where you find the actual page. For example, if you are on the "About Us" page, then the name "About Us" will be displayed on the right side. -->
+            <h1 class="currentlypage">HOME</h1>
+            <!-- Now, I used this <h1> tag to display the name of the page as a title on the right side. -->
+          </div>
+          <!-- This is the tag where I close the "currently" container, and it allows us to make changes with the CSS Style only to the currently displayed content. -->
+        </div>
+        <!-- With this tag, I close the "mainheader" container. -->
+      </section>
+      <!-- With this tag, I close the entire content inside the "header section." -->
+    </header>
+    <!-- This is the tag that closes the header in the HTML structure. -->
+
+    <main>
+      <!-- I used the <main> to start the mainly content of the document. -->
+      <section class="gallery-barber">
+        <!-- I used here the <section> tag with the class "gallery-barber" because I need to create a container where I
+            will display a 16 pictures from of Vilas Barber work and the user can check it. -->
+        <div class="gallerytitle">
+        <!-- I used the <div> tag here to create a new container.
+        it is the place where you find the content about the Vilas Barber. -->
+        <h1>A small piece of our day life</h1>
+        <!-- Now, I used this <h1> tag to display the name of the page as a title of the Gallery. -->
+          <a class="buttongallery" href="../pages/packages.html"
+            >Appointment now</a
+          >
+          <!-- I used this <a> tag because I want this button to be a link, where the user can
+            click and thus be directed to the corresponding page. In this case you will be directed to the "Package" page. -->
+        </div>
+        <!-- With this tag, I close the "gallerytitle" container. -->
+
+        <div class="blocksgallery">
+          <!-- I used a div here to make a container to add 16 images inside. -->
+          <img class="photo" src="../img/8.jpg" alt="A man getting hair cutting"/>
+          <!-- I used this tag to add a picture to the "blocksgallery", The "src" attribute indicates where the
+             picture is located in the project folder. Also, I used the "alt" attribute to provide information about the picture,
+             so when the picture doesn't load, the phrase will appear, and the user will know what it is.  -->
+          <img class="photo" src="../img/10.jpg" alt="A man shaving another man's beard with a razor."/>
+          <!-- I used this tag to add a picture to the "blocksgallery", The "src" attribute indicates where the
+             picture is located in the project folder. Also, I used the "alt" attribute to provide information about the picture,
+             so when the picture doesn't load, the phrase will appear, and the user will know what it is.  -->
+          <img class="photo" src="../img/11.jpg" alt="A man cutting another man's beard with a machine"/>
+          <!-- I used this tag to add a picture to the "blocksgallery", The "src" attribute indicates where the
+             picture is located in the project folder. Also, I used the "alt" attribute to provide information about the picture,
+             so when the picture doesn't load, the phrase will appear, and the user will know what it is.  -->
+          <img class="photo" src="../img/12.jpg" alt="A man combing another man's beard with a comb."/>
+          <!-- I used this tag to add a picture to the "blocksgallery", The "src" attribute indicates where the
+             picture is located in the project folder. Also, I used the "alt" attribute to provide information about the picture,
+             so when the picture doesn't load, the phrase will appear, and the user will know what it is.  -->
+          <img class="photo" src="../img/6.jpg" alt="A man cutting another man's beard with scissors."/>
+          <!-- I used this tag to add a picture to the "blocksgallery", The "src" attribute indicates where the
+             picture is located in the project folder. Also, I used the "alt" attribute to provide information about the picture,
+             so when the picture doesn't load, the phrase will appear, and the user will know what it is.  -->
+          <img class="photo" src="../img/nova3.jpg" alt="A man cutting another man's hair with a machine"/>
+          <!-- I used this tag to add a picture to the "blocksgallery", The "src" attribute indicates where the
+             picture is located in the project folder. Also, I used the "alt" attribute to provide information about the picture,
+             so when the picture doesn't load, the phrase will appear, and the user will know what it is.  -->
+          <img class="photo" src="../img/14.jpg" alt="A man cutting another man's hair with a machine"/>
+          <!-- I used this tag to add a picture to the "blocksgallery", The "src" attribute indicates where the
+             picture is located in the project folder. Also, I used the "alt" attribute to provide information about the picture,
+             so when the picture doesn't load, the phrase will appear, and the user will know what it is.  -->
+          <img class="photo" src="../img/16.jpg" alt="A man cutting another man's beard with a machine"/>
+          <!-- I used this tag to add a picture to the "blocksgallery", The "src" attribute indicates where the
+             picture is located in the project folder. Also, I used the "alt" attribute to provide information about the picture,
+             so when the picture doesn't load, the phrase will appear, and the user will know what it is.  -->
+          <img class="photo" src="../img/15.jpg" alt="A woman cutting another man's beard with scissors."/>
+          <!-- I used this tag to add a picture to the "blocksgallery", The "src" attribute indicates where the
+             picture is located in the project folder. Also, I used the "alt" attribute to provide information about the picture,
+             so when the picture doesn't load, the phrase will appear, and the user will know what it is.  -->
+          <img class="photo" src="../img/3.jpg" alt="A man looking in the mirror."/>
+          <!-- I used this tag to add a picture to the "blocksgallery", The "src" attribute indicates where the
+             picture is located in the project folder. Also, I used the "alt" attribute to provide information about the picture,
+             so when the picture doesn't load, the phrase will appear, and the user will know what it is.  -->
+          <img class="photo" src="../img/7.jpeg" alt="A man combing another man's beard with a comb."/>
+          <!-- I used this tag to add a picture to the "blocksgallery", The "src" attribute indicates where the
+             picture is located in the project folder. Also, I used the "alt" attribute to provide information about the picture,
+             so when the picture doesn't load, the phrase will appear, and the user will know what it is.  -->
+          <img class="photo" src="../img/2.jpg" alt="A man shaving another man's beard with a razor."/>
+          <!-- I used this tag to add a picture to the "blocksgallery", The "src" attribute indicates where the
+             picture is located in the project folder. Also, I used the "alt" attribute to provide information about the picture,
+             so when the picture doesn't load, the phrase will appear, and the user will know what it is.  -->
+          <img class="photo" src="../img/222.jpg" alt="A woman combing another man's beard with a comb."/>
+          <!-- I used this tag to add a picture to the "blocksgallery", The "src" attribute indicates where the
+             picture is located in the project folder. Also, I used the "alt" attribute to provide information about the picture,
+             so when the picture doesn't load, the phrase will appear, and the user will know what it is.  -->
+          <img class="photo" src="../img/111.jpg" alt="A woman shaving another man's beard with a razor."/>
+          <!-- I used this tag to add a picture to the "blocksgallery", The "src" attribute indicates where the
+             picture is located in the project folder. Also, I used the "alt" attribute to provide information about the picture,
+             so when the picture doesn't load, the phrase will appear, and the user will know what it is.  -->
+          <img class="photo" src="../img/nova1.jpg" alt="A man brushing a man's hair."/>
+          <!-- I used this tag to add a picture to the "blocksgallery", The "src" attribute indicates where the
+             picture is located in the project folder. Also, I used the "alt" attribute to provide information about the picture,
+             so when the picture doesn't load, the phrase will appear, and the user will know what it is.  -->
+          <img class="photo" src="../img/ultima.jpg" alt="A man cutting another man's beard with scissors."/>
+          <!-- I used this tag to add a picture to the "blocksgallery", The "src" attribute indicates where the
+             picture is located in the project folder. Also, I used the "alt" attribute to provide information about the picture,
+             so when the picture doesn't load, the phrase will appear, and the user will know what it is.  -->
+        </div>
+        <!-- With this tag, I close the "blocksgallery" container. -->
+        <div class="creditsgallery">
+        <!-- With this tag, I close the "creditsgallery" container. -->
+          <p>
+            © 2024 - All the media content on this gallery were created by:
+            <a href="https://www.freepik.com/search?format=search&last_filter=query&last_value=barber&query=barber" target="_blank" rel="noopener noreferrer"> Freepik</a>.
+          </p>
+          <!-- In this tag, I've been using <a> because the Freepik reference must be as a link, and this tag allow us to clic on.
+              and also the freepik link is the website where i got the pictures and this protects the original work from Freepik and makes it easy for the user to identify.
+              I put this command, "_blank", because it allows us to open the link in another tab in the browser, which lets the previous one stay open.
+              When I used the target="_blank", the browser, in a way, allows information exchange between the two tabs.
+              That is why I also used noopener, which tells the new page that it cannot access the page from which it came.
+              I also used noreferrer, which keeps the two tabs well separated without this exchange of information, ensuring more security.
+              So, with it, the new link opened in another tab does not know where we came from."-->
+        </div>
+        <!-- With this tag, I close the "creditsgallery" container. -->
+      </section>
+      <!-- With this tag, I close the entire content inside the "gallery-barber". -->
+
+      <div class="whatsappblock">
+        <!-- because this section will display the Whatsapp Logo on the page.
+            And it will be shown on all 5 pages. -->
+        <a href="https://wa.me/353852373061?text=Olá%20quero%20mais%20informações" target="_blank" rel="noopener noreferrer">
+            <img class="whatasapp" src="../img/Whtsapp2.png" alt="Black Whatsapp Logo">
+        </a>
+        <!-- I used this tag to add a picture to the Whatsapp contact link: Whatsapp Icon.
+        The "src" attribute indicates where the picture is located in the project folder. Also, I used the "alt"
+        attribute to provide information about the picture, so when the picture doesn't load, the phrase will appear,
+        and the user will know what it is.  -->
+      </div>
+      <!-- I'm using here the tah /div to close the div "whatsappblock". -->
+    </main>
+    <!-- I used this to close the main section on the HTML structure. -->
+
+    <footer>
+      <!-- After the clising of the "main", this is where the "footer" is located,
+       Container father of the content footer, where you typically find the navigation list also,
+       the logo or name of the website, and some information like the references, Address, E-mail or Telephone Number. -->
+      <section class="footer">
+         <!-- In my footer, I have two sections, almost the same as the header, but the diference here is that the menu
+         is displayed first as a footer 1, after we displayed the coopyright and references as a footer 2.
+         In div 1, we can find the mustache logo, the nav list menu of the website,
+         and the display that show the coopyright, Address, E-mail and Phone Number.
+         Therefore, this command defines the section header, where we have div 1, div 2 and credits inside.
+         the second one I used to put all the information about copyright, licenses,
+         and references for the all media that I’ve been using here. -->
+        <div>
+          <!-- I used this tag to open the father container, where I split the footer into two sections -->
+          <div class="footer1">
+            <!-- I used this div footer 1 to create a container with the informations, as a logo mustache, menu nav list and the currently page and the copyright. -->
+            <div>
+              <!-- I used this <div> tag to create a container with a logo content.
+              And separeted the logo mustache imagem inside the footer 1 -->
+              <img
+                class="img"
+                src="../img/moustache1.png"
+                alt="Mustache Logo"
+              />
+              <!-- I used this tag to add a picture to the footer, which is the company logo: a mustache. The "src" attribute indicates where the
+             picture is located in the project folder. Also, I used the "alt" attribute to provide information about the picture,
+             so when the picture doesn't load, the phrase will appear, and the user will know what it is.  -->
+            </div>
+            <!-- I used it to close the first container inside the footer 1, where the content is the img log mustache. -->
+
+            <nav>
+              <!-- I used this tag to start the navigation list menu section, which allows us to create a navigation menu. -->
+              <ul>
+                <!-- Since it is a navigation menu, we need to create an unordered list, which corresponds to the type of menu I created.
+                  That is why I used this tag -->
+                <li>
+                  <!-- I used this tag to define the first item of the unordered list, which in my case is the "Home" page. -->
+                  <a href="../pages/index.html">Home</a>
+                  <!-- I used this <a> tag because I want the first item of the unordered list to be a link, where the user can click and thus be directed to the corresponding page.
+                    In this case, by clicking on the first item in this list, you will be directed to the "Home" page. -->
+                </li>
+                <!-- I used this tag to close the first item of the unordered list, which in my case is the "Home" page. -->
+                <li>
+                  <!-- I used this tag to define the second item of the unordered list, which in my case is the "About us" page. -->
+                  <a href="../pages/about.html">About</a>
+                  <!-- I used this <a> tag because I want the second item of the unordered list to be a link, where the user can click and thus be directed to the corresponding page.
+                    In this case, by clicking on the second item in this list, you will be directed to the "About us" page. -->
+                </li>
+                <!-- I used this tag to close the second item of the unordered list, which in my case is the "About us" page. -->
+                <li>
+                  <!-- I used this tag to define the third item of the unordered list, which in my case is the "Gallery" page. -->
+                  <a href="../pages/gallery.html">Gallery</a>
+                  <!-- I used this <a> tag because I want the third item of the unordered list to be a link, where the user can click and thus be directed to the corresponding page.
+                    In this case, by clicking on the third item in this list, you will be directed to the "Gallery" page. -->
+                </li>
+                <!-- I used this tag to close the third item of the unordered list, which in my case is the "Gallery" page. -->
+                <li>
+                  <!-- I used this tag to define the fourth item of the unordered list, which in my case is the "Packages" page. -->
+                  <a href="../pages/packages.html">Packages</a>
+                  <!-- I used this <a> tag because I want the fourth item of the unordered list to be a link, where the user can click and thus be directed to the corresponding page.
+                    In this case, by clicking on the fourth item in this list, you will be directed to the "Packages" page. -->
+                </li>
+                <!-- I used this tag to close the fourth item of the unordered list, which in my case is the "Packages" page. -->
+                <li>
+                  <!-- I used this tag to define the fifth item of the unordered list, which in my case is the "Contact" page. -->
+                  <a href="../pages/contact.html">Contact</a>
+                  <!-- I used this <a> tag because I want the fifth item of the unordered list to be a link, where the user can click and thus be directed to the corresponding page.
+                    In this case, by clicking on the fifth item in this list, you will be directed to the "Contact" page. -->
+                </li>
+                <!-- I used this tag to close the fifth item of the unordered list, which in my case is the "Contact" page. -->
+              </ul>
+              <!-- So here I used this tag to close the unordered list of header 2. -->
+            </nav>
+            <!-- I used this tag to close the navigation list menu section, making the container close. -->
+
+            <div class="currently">
+              <!-- I used the <div> tag here to create a new container where we can find the content "currently," which means:
+              it is the place where you find the actual page. For example, if you are on the "Gallery" page, then the name "Gallery" will be displayed on the right side. -->
+              <h1 class="currentlypage">HOME</h1>
+              <!-- Now, I used this <h1> tag to display the name of the page as a title on the right side. -->
+            </div>
+            <!-- This is the tag where I close the "currently" container, and it allows us to make changes with the CSS Style only to the currently displayed content. -->
+            </div>
+            <!-- With this tag, I close the "mainheader" container. -->
+            </section>
+            <!-- With this tag, I close the entire content inside the "header section." -->
+
+            <div class="footer2">
+            <!-- As I said, I also had 2 footers, footer 1 and footer 2.
+             And now i'm starting here the footer 2 container. -->
+            <div class="footer2copyright">
+              <!-- Now im using here a div to creat a container with the Email address, Phone Number and the Coopyright. -->
+              <div>
+              <!-- I used <div> here to create a <p> tag inside and allow me to position it within the container. -->
+                <p>📌 34 Westmoreland St, Dublin 2, Dublin - D02HK35</p>
+                <!--  I used here the tag <p> to display the Address on my website.
+                PS: I have been use the CCT Address to fake it as the Vilas Barber Address. -->
+              </div>
+              <!-- I have used this </div> to close the Address division. -->
+                <div>
+                  <!-- I used <div> here to create a <p> tag inside and allow me to position it within the container. -->
+                  <p> 📞 Phone +353 (85) 237-3061 | 📩 E-mail: vilasbarber@gmail.com </p>
+                  <!--  I used here the tag <p> to display the Phont Number and the E-mail on my website.
+                  PS: I have been using My Telephone Number and a fake E-mail as the Vilas Barber Contact. -->
+                </div>
+                <!-- I have used this </div> to close the Phone and E-mail division. -->
+              <div>
+                <!-- I used <div> here to create a <p> tag inside and allow me to position it within the container. -->
+                <p> © Copyright 2024 - Augusto Vilas Boas, All rights reserved.</p>
+                <!--  I used here the tag <p> to display the Copyright on the website. -->
+              </div>
+              <!-- I have used this </div> to close the Copyright division. -->
+            </div>
+            <!-- I have used this </div> to close the footer2copyright.
+             Making us able to position all the content inside properly -->
+          </div>
+          <!-- I used this div footer 1 to close container with the informations, as a logo mustache, menu nav list and the currently page and the copyright. -->
+        </div>
+        <!-- I used this tag to close the father container, where I split the footer into two sections -->
+
+        <div class="credits">
+          <!-- This command defines where the footer credits start.
+           which contains all the information and references about the sites where I got all the media. -->
+          <p>All the media content on this website has been created by:</p>
+          <!-- In this tag, I've been using <p> because it is a tag where I simply
+            introduce information about the media used on the site. It is where the
+            user will see at the top of the site the necessary information about who
+            created the media used here -->
+          <p>
+            © 2024 Images and logos created by:
+            <!-- In this tag, I've been using <p> as well and this tag allow us to whrite any information inside it.
+              And show it on the webpage to the user. And the user will see this phrase on the webpage top. -->
+            <a
+              href="https://www.freepik.com/search?format=search&last_filter=query&last_value=barber&query=barber"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Freepik</a
+            >.
+            <!-- In this tag, I've been using <a> because the Freepik reference must be as a link, and this tag allow us to clic on.
+              and also the freepik link is the website where i got the pictures and this protects the original work from Freepik and makes it easy for the user to identify.
+              I put this command, "_blank", because it allows us to open the link in another tab in the browser, which lets the previous one stay open.
+              When I used the target="_blank", the browser, in a way, allows information exchange between the two tabs.
+              That is why I also used noopener, which tells the new page that it cannot access the page from which it came.
+              I also used noreferrer, which keeps the two tabs well separated without this exchange of information, ensuring more security.
+              So, with it, the new link opened in another tab does not know where we came from."-->
+          </p>
+          <!-- U use this tah because is here that we close the tag <p>. So the user can see properly the information inside it on the website. -->
+          <p>
+            © 2024 Icons created by:
+            <!-- In this tag, I've been using <p> as well and this tag allow us to whrite any information inside it.
+                And show it on the webpage to the user. And the user will see this phrase on the webpage top. -->
+            <a
+              href="https://www.flaticon.com/search?word=moustache"
+              target="_blank"
+              rel="nooper noreferrer"
+              >Flaticon</a
+            >.
+            <!-- In this tag, I've been using <a> because the FlatIcon reference must be as a link, and this tag allow us to clic on.
+                  and also the FlatIcon link is the website where i got the pictures and this protects the original work from Freepik and makes it easy for the user to identify.
+                  I put this command, "_blank", because it allows us to open the link in another tab in the browser, which lets the previous one stay open.
+                  When I used the target="_blank", the browser, in a way, allows information exchange between the two tabs.
+                  That is why I also used noopener, which tells the new page that it cannot access the page from which it came.
+                  I also used noreferrer, which keeps the two tabs well separated without this exchange of information, ensuring more security.
+                  So, with it, the new link opened in another tab does not know where we came from."-->
+          </p>
+          <!-- U use this tah because is here that we close the tag <p>. So the user can see properly the information inside it on the website. -->
+          <p>
+            <!-- U use this tah because is here that we close the tag <p>. So the user can see properly the information inside it on the website. -->
+            © 2024 Icons created by:
+            <!-- In this tag, I've been using <p> as well and this tag allow us to whrite any information inside it.
+              And show it on the webpage to the user. And the user will see this phrase on the webpage top. -->
+            <a
+              href="https://icons8.com/icon/set/barbershop%C2%B4/family-forma"
+              target="_blank"
+              rel="nooper noreferrer"
+              >Icons8</a
+            >.
+            <!-- In this tag, I've been using <a> because the FlatIcon reference must be as a link, and this tag allow us to clic on.
+                  and also the FlatIcon link is the website where i got the pictures and this protects the original work from Freepik and makes it easy for the user to identify.
+                  I put this command, "_blank", because it allows us to open the link in another tab in the browser, which lets the previous one stay open.
+                  When I used the target="_blank", the browser, in a way, allows information exchange between the two tabs.
+                  That is why I also used noopener, which tells the new page that it cannot access the page from which it came.
+                  I also used noreferrer, which keeps the two tabs well separated without this exchange of information, ensuring more security.
+                  So, with it, the new link opened in another tab does not know where we came from."-->
+          </p>
+          <!-- U use this tah because is here that we close the tag <p>. So the user can see properly the information inside it on the website. -->
+        </div>
+        <!-- I use this tag to close the div credits footer. -->
+      </section>
+      <!-- Here is where I used to close the "footer section" -->
+    </footer>
+    <!-- This is the tag that I used to closes the footer in the HTML structure. -->
+  </body>
+  <!-- This is the tag that I used to closes the body in the HTML strucure. -->
+</html>
+<!-- I used this tag to close the HTML Document, indicating the end of structure. -->
